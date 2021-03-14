@@ -40,8 +40,7 @@ RUN set -x \
               autoconf \
               libtool \
               g++-7 \
- && true
-RUN true \
+
 # reset apt-mark's "manual" list so that "purge --auto-remove" will remove all build dependencies
 # (which is done after we install the built packages so we don't have to redownload any overlapping dependencies)
 	&& apt-mark showmanual | xargs apt-mark auto > /dev/null \
